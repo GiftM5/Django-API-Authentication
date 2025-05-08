@@ -9,4 +9,6 @@ from .serializer import UserSerializer
 
 @api_view(['GET'])
 def get_user_email(request):
-    return Response(UserSerializer({"user_email":"gift@gmail.com","user_id":34}))
+    data = {"user_email":"gift@gmail.com","user_id":34}
+    serializer = UserSerializer(data)
+    return Response(serializer.data)
