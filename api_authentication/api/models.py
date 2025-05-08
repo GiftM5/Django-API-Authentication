@@ -7,7 +7,5 @@ class User(models.Model):
     
 # So this basically creates the tables for the database   
       def __str__(self):
-            return self.user_email
+            return self.user_
       
-      def __str__(self):
-            return self.user_id
