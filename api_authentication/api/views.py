@@ -14,6 +14,10 @@ def get_user_email(request):
     return Response(serializer.data)
 
 @api_view(['POST'])
+def login(request):
+    pass
+
+@api_view(['POST'])
 def create_user(request):
     serializer = UserSerializer(data=request.data)
     if serializer.is_valid():
