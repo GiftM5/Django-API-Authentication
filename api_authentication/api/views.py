@@ -7,15 +7,27 @@ from .serializer import UserSerializer
 
 # Create your views here.
 
+
+
+@api_view(['POST'])
+def login(request):
+    return Response({})
+
+@api_view(['POST'])
+def signup(request):
+    return Response({})
+
 @api_view(['GET'])
-def get_user_email(request):
+def test_token(request):
+    return Response({})
+
+@api_view(['GET'])
+def get_user_emails(request):
     users = User.objects.all()
     serializer = UserSerializer(users, many= True)
     return Response(serializer.data)
 
-@api_view(['POST'])
-def login(request):
-    pass
+
 
 @api_view(['POST'])
 def create_user(request):
